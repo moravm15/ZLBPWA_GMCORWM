@@ -14,7 +14,7 @@ sap.ui.controller("zlbpwa_gmcorwm.ext.controller.ListReportExtension", {
 	},
 
 	onBeforeRebindTableExtension: function (oEvent) {
-	//	this._setAnalyticalTableAutoResizeColumns();
+		//	this._setAnalyticalTableAutoResizeColumns();
 
 		var oSmartTable = oEvent.getSource();
 		var oTable = oSmartTable.getTable();
@@ -37,7 +37,7 @@ sap.ui.controller("zlbpwa_gmcorwm.ext.controller.ListReportExtension", {
 		let iCurrentYear = (new Date()).getFullYear();
 
 		this.refreshDecadeList(iCurrentYear);
-		
+
 		let sDateRangeString = this.byId("decadeFilter").getSelectedItem().getAdditionalText();
 		let aDateRange = sDateRangeString.split(" – ");
 		let aDateFrom = aDateRange[0].split(". ");
@@ -50,7 +50,7 @@ sap.ui.controller("zlbpwa_gmcorwm.ext.controller.ListReportExtension", {
 		let iYearTo = parseInt(aDateTo[2], 10);
 		let oDateFrom = new Date(iYearFrom, iMonthFrom, iDayFrom, 0, 0, 0);
 		let oDateTo = new Date(iYearTo, iMonthTo, iDayTo, 23, 59, 59);
-		
+
 		let fSetup = function () {
 			let oDateRangeControl = sap.ui.getCore().byId(
 				"zlbpwa_gmcorwm::sap.suite.ui.generic.template.ListReport.view.ListReport::GMCORwmControlSet--listReportFilter-filterItemControl_BASIC-Date");
@@ -63,7 +63,7 @@ sap.ui.controller("zlbpwa_gmcorwm.ext.controller.ListReportExtension", {
 		}
 		setTimeout(fSetup, 100);
 	},
-	
+
 	refreshDecadeList: function (iYear) {
 		let oDecadeFilter = this.byId("decadeFilter");
 		let oDate = new Date();
@@ -112,7 +112,7 @@ sap.ui.controller("zlbpwa_gmcorwm.ext.controller.ListReportExtension", {
 		let iYearTo = parseInt(aDateTo[2], 10);
 		let oDateFrom = new Date(iYearFrom, iMonthFrom, iDayFrom, 0, 0, 0);
 		let oDateTo = new Date(iYearTo, iMonthTo, iDayTo, 23, 59, 59);
-		
+
 		let oDateRangeControl = sap.ui.getCore().byId(
 			"zlbpwa_gmcorwm::sap.suite.ui.generic.template.ListReport.view.ListReport::GMCORwmControlSet--listReportFilter-filterItemControl_BASIC-Date");
 		oDateRangeControl.setDateValue(oDateFrom);
@@ -130,7 +130,7 @@ sap.ui.controller("zlbpwa_gmcorwm.ext.controller.ListReportExtension", {
 					"zlbpwa_gmcorwm::sap.suite.ui.generic.template.ListReport.view.ListReport::GMCORwmControlSet--listReport-" + sIdPart);
 			});
 			return (aFound.length > 0 ? aFound[0] : {
-				setWidth: function () {}
+				setWidth: function () { }
 			});
 		}
 
