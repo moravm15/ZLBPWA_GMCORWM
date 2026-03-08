@@ -1,0 +1,32 @@
+specVersion: "4.0"
+metadata:
+  name: zlbpwa_gmcorwm
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertErrors: false
+        backend:
+          - path: /sap
+            url: http://wf2.lag.at:443
+            scp: true
+            destination: WF2
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+          version: 1.71.13
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        component: zlbpwa_gmcorwm
+        ui5Theme: sap_fiori_3

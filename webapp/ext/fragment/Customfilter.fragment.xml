@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:smartfilterbar="sap.ui.comp.smartfilterbar" xmlns:core="sap.ui.core">
+	<smartfilterbar:ControlConfiguration key="decade" index="1" label="{@i18n&gt;DEKÁDA}" groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<ComboBox id="decadeFilter" showSecondaryValues="true" change="onDecadeChange">
+			</ComboBox>
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+	<smartfilterbar:ControlConfiguration key="atroLutro" index="271" label="{@i18n&gt;ATRO_LUTRO}" groupId="_BASIC">
+		<smartfilterbar:customControl>
+			<Switch id="atroLutroFilter" state="true" customTextOff="Lutro" customTextOn="Atro" />
+		</smartfilterbar:customControl>
+	</smartfilterbar:ControlConfiguration>
+</core:FragmentDefinition>

@@ -1,0 +1,419 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="/sap/opu/odata/sap/ZLBPWA_AC_SRV/$metadata">
+		<edmx:Include Alias="Metadata" Namespace="ZLBPWA_AC_SRV"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470968/UI.xml?api=v2">
+		<edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="https://wiki.scn.sap.com/wiki/download/attachments/448470974/Common.xml?api=v2">
+		<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+	</edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zlbpwa_gmcorwm.annotations.annotation0.ZLBPWA_AC_SRV">
+			<Annotations Target="Metadata.GMCORwmControl">
+				<Annotation Term="Common.Label" String="{@i18n&gt;appTitle}"/>
+				<Annotation Term="UI.PresentationVariant">
+					<Record Type="UI.PresentationVariantType">
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="Fiscalperiod"/>
+								</Record>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="Decade"/>
+								</Record>
+								<Record Type="Common.SortOrderType">
+									<PropertyValue Property="Property" PropertyPath="Date"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@UI.LineItem</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="RequestAtLeast">
+							<Collection>
+								<PropertyPath>Fiscalperiod</PropertyPath>
+								<PropertyPath>Decade</PropertyPath>
+								<PropertyPath>Date</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>Date</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<!--<Record Type="UI.DataField">-->
+						<!--	<PropertyValue Property="Value" Path="InvcorO3"/>-->
+						<!--	<PropertyValue Property="Label" String="{@i18n&gt;KOREKCE_INV}"/>-->
+						<!--</Record>-->
+						<!--<Record Type="UI.DataField">-->
+						<!--	<PropertyValue Property="Value" Path="KorIStepNak"/>-->
+						<!--	<PropertyValue Property="Label" String="{@i18n&gt;KOREKCE_INV}"/>-->
+						<!--</Record>-->
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Fiscalperiod"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ÚČETNÍ_OBDOBÍ}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Decade"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;DEKÁDA}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Date"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;DATUM}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="PrestoredO2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;POČÁTEČNÍ_STAV_O2}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZdhO2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;PŘÍRŮSTEK_Z_NÁKUPU_O2}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzO2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SPOTŘEBA_O2_CELKEM}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi127O2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SPOTŘEBA_O2}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ExhalationO2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;VÝDECH_O2}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OpcorO2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KOREKCE_PROVOZNÍ}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="InvcorO2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KOREKCE_AUTOMATICKÁ}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="StoredO2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KONEČNÝ_STAV_O2}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="PrestoredO3"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;POČÁTEČNÍ_STAV_O3}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzO3"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;PŘÍRŮSTEK_O3_CELKEM}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ExhalationO3"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;VÝDECH_O3}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="InvcorO3"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;INVENTURNÍ_KOREKCE_ZDH}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzZdhVl"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZDH_KURA_Z_VLAKNINY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Bark"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;W-100_KŮRA_Z_ODKORNĚNÍ}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi171Pil"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;PILINY_Z_VL_ŠTĚPKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi111Fra"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;FRAKCE_A_Z_VL_ŠTĚPKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ScrapVlKura"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SMETKY_Z_VL_ŠT}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="KorPVlZdh"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;PODÍL_KOREKCÍ_Z_VLÁKNINY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzZdhNak"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZDH_KURA_Z_NAK_ŠTĚPKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi171PilNak"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;PILINY_Z_NAK_ŠTĚPKY_OSTATNÍ}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi171PilMm"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;PILINY_Z_NAK_ŠTĚPKY_MM}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi111FraNak"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;FRAKCE_A_Z_NAK_ŠTĚPKY_OSTATNÍ}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi111FraMm"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;FRAKCE_A_Z_NAK_ŠTĚPKY_MM}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ScrapPurKura"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SMETKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="KorPStepZdh"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;PODÍL_KOREKCÍ_ZE_NAKUPOVANÉ_ŠTĚPKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzZdhBo"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZZ_ZDH_BO}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi171PilBo"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;WI_171_PIL_BO}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi111FraBo"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;WI_111_FRA_BO}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ScrapBo"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SCRAP_BO}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="KorBostepka"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KOR_BOSTEPKA}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzZdhVstepka"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZDH_KURA_Z_VSTEPKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ScrapVstepka"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SMETKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="KnotsBoil57"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SUKY_A_NEPROVARY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzZdhNstepka2"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZDH_KURA_Z_NSTEPKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ScrapNstepka"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SMETKY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="KnotsNak"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SUKY_A_NEPROVARY}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzZdhBostepka"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;ZZ_ZDH_BOSTEPKA}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ScrapBostepka"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SCRAP_BOSTEPKA}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="KnotsBostepka"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KNOTS_BOSTEPKA}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZzZdhKura"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;SPOTŘEBA_O3_NA_KŮROVÝ_KOTEL}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Wi127O3"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;WI-127_SPOTŘEBA_ZDH_O3_HM_T}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OpcorO3"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KOREKCE_PROV}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="Invcor"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KOREKCE_INV}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="StoredO3"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;KONEČNÝ_STAV_O3}"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="ZdhKk"/>
+							<PropertyValue Property="Label" String="{@i18n&gt;CELKEM_SPOTŘEBA_ZDH_NA_KK}"/>
+						</Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Decade">
+				<Annotation Term="Common.Label" String="{@i18n&gt;DEKÁDA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Date">
+				<Annotation Term="Common.Label" String="{@i18n&gt;DATUM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Atro">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ATRO_LUTRO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/GeneratedId">
+				<Annotation Term="UI.Hidden" Bool="true"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Fiscalperiod">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ÚČETNÍ_OBDOBÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZdhO2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PŘÍRŮSTEK_Z_NÁKUPU_O2}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/PrestoredO2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;POČÁTEČNÍ_STAV_O2}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzO2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SPOTŘEBA_O2_CELKEM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi127O2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SPOTŘEBA_O2}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ExhalationO2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;VÝDECH_O2}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/OpcorO2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KOREKCE_PROVOZNÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/InvcorO2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KOREKCE_AUTOMATICKÁ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/StoredO2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KONEČNÝ_STAV_O2}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/PrestoredO3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;POČÁTEČNÍ_STAV_O3}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZdhO3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PŘÍRŮSTEK_O3_CELKEM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzO3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PŘÍRŮSTEK_O3_CELKEM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ExhalationO3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;VÝDECH_O3}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/OpcorO3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KOREKCE_PROVOZNÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhNak">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ZDH_KURA_Z_VL_ŠTĚPKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhVl">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ZDH_KURA_Z_VLAKNINY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Bark">
+				<Annotation Term="Common.Label" String="{@i18n&gt;W-100_KŮRA_Z_ODKORNĚNÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi171Pil">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PILINY_Z_VL_ŠTĚPKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi111Fra">
+				<Annotation Term="Common.Label" String="{@i18n&gt;FRAKCE_A_Z_VL_ŠTĚPKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ScrapVlKura">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SMETKY_Z_VL_ŠT}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/KorPVlZdh">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PODÍL_KOREKCÍ_Z_VLÁKNINY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/InvcorO3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;INVENTURNÍ_KOREKCE_ZDH}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhNstepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ZDH_KURA_Z_NAK_ŠTĚPKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi171PilNak">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PILINY_Z_NAK_ŠTĚPKY_OSTATNÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi171PilMm">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PILINY_Z_NAK_ŠTĚPKY_MM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi111FraNak">
+				<Annotation Term="Common.Label" String="{@i18n&gt;FRAKCE_A_Z_NAK_ŠTĚPKY_OSTATNÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi111FraMm">
+				<Annotation Term="Common.Label" String="{@i18n&gt;FRAKCE_A_Z_NAK_ŠTĚPKY_MM}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ScrapPurKura">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SMETKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/KorPStepZdh">
+				<Annotation Term="Common.Label" String="{@i18n&gt;PODÍL_KOREKCÍ_ZE_NAKUPOVANÉ_ŠTĚPKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/KorIStepNak">
+				<Annotation Term="UI.Hidden" Bool="false"/>
+				<Annotation Term="Common.Label" String="{@i18n&gt;KOREKCE_INV}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhVstepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ZDH_KURA_Z_VSTEPKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ScrapVstepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SMETKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/KnotsBoil57">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SUKY_A_NEPROVARY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhNstepka2">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ZDH_KURA_Z_NSTEPKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ScrapNstepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SMETKY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/KnotsNak">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SUKY_A_NEPROVARY}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhKura">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SPOTŘEBA_O3_NA_KŮROVÝ_KOTEL}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi127O3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;WI-127_SPOTŘEBA_ZDH_O3_HM_T}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Opcor">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KOREKCE_PROVOZNÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Invcor">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KOREKCE_INVENTURNÍ}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/StoredO3">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KONEČNÝ_STAV_O3}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZdhKk">
+				<Annotation Term="Common.Label" String="{@i18n&gt;CELKEM_SPOTŘEBA_ZDH_NA_KK}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhBo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ZZ_ZDH_BO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi171PilBo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;WI_171_PIL_BO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/Wi111FraBo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;WI_111_FRA_BO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ScrapBo">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SCRAP_BO}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/KorBostepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KOR_BOSTEPKA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ZzZdhBostepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;ZZ_ZDH_BOSTEPKA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/ScrapBostepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;SCRAP_BOSTEPKA}"/>
+			</Annotations>
+			<Annotations Target="Metadata.GMCORwmControl/KnotsBostepka">
+				<Annotation Term="Common.Label" String="{@i18n&gt;KNOTS_BOSTEPKA}"/>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
