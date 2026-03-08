@@ -113,6 +113,10 @@
                             <PropertyValue Property="Label" String="{@i18n&gt;VÝDECH_O3}" />
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Sale" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Sale}" />
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="InvcorO3" />
                             <PropertyValue Property="Label" String="{@i18n&gt;INVENTURNÍ_KOREKCE_ZDH}" />
                         </Record>
@@ -139,6 +143,30 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="KorPVlZdh" />
                             <PropertyValue Property="Label" String="{@i18n&gt;PODÍL_KOREKCÍ_Z_VLÁKNINY}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ZzZdhBk" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ZzZdhBk}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BarkBk" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;BarkBk}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Wi171PilBk" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Wi171PilBk}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Wi111FraBk" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;Wi111FraBk}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ScrapBkKura" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ScrapBkKura}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="KorPBkZdh" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;KorPBkZdh}" />
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="ZzZdhNak" />
@@ -201,6 +229,18 @@
                             <PropertyValue Property="Label" String="{@i18n&gt;SUKY_A_NEPROVARY}" />
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ZzZdhBkvstepka" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ZzZdhBkvstepka}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ScrapBkvstepka" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;ScrapBkvstepka}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="KnotsBoilBkvstepka" />
+                            <PropertyValue Property="Label" String="{@i18n&gt;KnotsBoilBkvstepka}" />
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="ZzZdhNstepka2" />
                             <PropertyValue Property="Label" String="{@i18n&gt;ZDH_KURA_Z_NSTEPKY}" />
                         </Record>
@@ -244,6 +284,7 @@
                             <PropertyValue Property="Value" Path="StoredO3" />
                             <PropertyValue Property="Label" String="{@i18n&gt;KONEČNÝ_STAV_O3}" />
                         </Record>
+
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="ZdhKk" />
                             <PropertyValue Property="Label" String="{@i18n&gt;CELKEM_SPOTŘEBA_ZDH_NA_KK}" />
@@ -413,6 +454,36 @@
             </Annotations>
             <Annotations Target="Metadata.GMCORwmControl/KnotsBostepka">
                 <Annotation Term="Common.Label" String="{@i18n&gt;KNOTS_BOSTEPKA}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/Sale">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Sale}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/ZzZdhBk">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ZzZdhBk}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/BarkBk">
+                <Annotation Term="Common.Label" String="{@i18n&gt;BarkBk}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/Wi171PilBk">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Wi171PilBk}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/Wi111FraBk">
+                <Annotation Term="Common.Label" String="{@i18n&gt;Wi111FraBk}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/ScrapBkKura">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ScrapBkKura}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/KorPBkZdh">
+                <Annotation Term="Common.Label" String="{@i18n&gt;KorPBkZdh}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/ZzZdhBkvstepka">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ZzZdhBkvstepka}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/ScrapBkvstepka">
+                <Annotation Term="Common.Label" String="{@i18n&gt;ScrapBkvstepka}" />
+            </Annotations>
+            <Annotations Target="Metadata.GMCORwmControl/KnotsBoilBkvstepka">
+                <Annotation Term="Common.Label" String="{@i18n&gt;KnotsBoilBkvstepka}" />
             </Annotations>
         </Schema>
     </edmx:DataServices>
